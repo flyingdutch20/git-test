@@ -1,0 +1,14 @@
+Function Correct_Decimal_Usage(ThisNum As Variant) As Double
+ 
+Dim Answ As Double
+
+If (CDbl(Replace(ThisNum, ",", "."))) <> CDbl(ThisNum) Then
+     '    MsgBox "ThisNum " & CDbl(ThisNum) & " caused a problem!" & vbNewLine & " Should be: " & CDbl(Replace(ThisNum, ",", "."))
+         Answ = CDbl(Replace(ThisNum, ",", "."))
+Else
+     '    MsgBox "str1 " & CDbl(ThisNum) & " is fine!"
+         Answ = CDbl(ThisNum)
+End If
+
+End Function
+
